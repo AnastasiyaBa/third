@@ -1,0 +1,190 @@
+/* Mobile first: мобильная версия */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+/* Шапка: логотип слева, название справа, кнопки внизу столбиком */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #F4DBDB;
+    padding: 20px;
+}
+
+.header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Меню кнопок: столбиком на всю ширину */
+.menu-btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu-btns a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: #CD4662;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.menu-btns a:hover {
+    background-color: #F4DBDB;
+    color: #CD4662;
+}
+
+/* Основной контент: по всей ширине */
+.content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color:#F4F2EF;
+}
+
+h3{
+    background-color: #AEC289;
+    max-width: 960px;
+    padding-left: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+    font-size: 22px;
+}
+
+
+/* Таблица, ссылки и форма идут друг за другом */
+.tab, .s, .forms {
+    margin-bottom: 20px;
+}
+
+.s a{
+    text-decoration: none;
+    color: #000;
+}
+
+.s a:hover{
+    text-decoration: none;
+    color: #CD4662;
+}
+
+
+.tab{
+    flex:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border: 2px solid #CD4662;
+    text-align: center;
+}
+
+tr:nth-child(odd){
+    background-color: #F4DBDB;
+}
+
+tr:nth-child(even){
+    background-color: #F4F2EF;
+}
+
+td{
+    border: 2px solid #CD4662;
+}
+
+/* Footer: содержимое по левому краю */
+.footer {
+    width: 100%;
+    background-color: #F4DBDB;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+/* Медиазапрос для больших экранов (больше 768px) */
+@media (min-width: 1000px) {
+
+    /* Шапка: лого и название слева, кнопки справа в строку */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .header-cont {
+        max-width: 960px;
+        margin: 0 auto;
+        justify-content:left;
+    }
+
+    .header-title {
+        font-size: 24px;
+    }
+
+    .menu-btns {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .menu-btns a {
+        width: auto;
+        margin-left: 10px;
+        padding: 10px 20px;
+    }
+
+    /* Основной контент: 960px по центру экрана, прижат к левому краю */
+    .content {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .s{
+        order: 1;
+    }
+
+    .tab{
+        order: 2;
+    }
+
+    .forms{
+        order: 3;
+    }
+
+    /* Footer: растянут по ширине, контент прижат к левому краю */
+    .footer {
+        width: 100%;
+        padding: 30px;
+        text-align: left;
+    }
+}
